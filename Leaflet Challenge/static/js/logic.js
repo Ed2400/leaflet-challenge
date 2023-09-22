@@ -54,8 +54,8 @@ function createMap(earthquakes) {
     // Add the control to the map
     /*L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
-    }).addTo(myMap)*/
-    
+    }).addTo(myMap)
+    */
     let legend = L.control({position: 'bottomright'});
 
     legend.onAdd = function (myMap) {
@@ -67,7 +67,7 @@ function createMap(earthquakes) {
 
         for (let i = 0; i < grades.length; i++) {
             div.innerHTML +=
-                '<i style="background:' + markerColor(grades[i] + 1) + '"></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+                '<i style="display:list-item;background:' + markerColor(grades[i])+ '"></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
         }    
         return div;
         };
